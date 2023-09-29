@@ -7,6 +7,7 @@
 }
 body{
     font-family: var(--sm-font);
+    padding-top: 100px;
 }
 
 /* button */
