@@ -10,6 +10,7 @@ class UserController extends BaseController
 
     public function register()
     {
+        
         helper(['form']);
         $rules = [
             'username' => 'required|min_length[4]|max_length[50]',
