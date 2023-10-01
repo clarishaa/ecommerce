@@ -30,16 +30,6 @@ class AuthGuard implements FilterInterface
     if (!$session->get('isLoggedIn')) {
         return redirect()->to(base_url('/login'));
     }
-    
-    $userRole = $session->get('userRole');
-    
-    if ($userRole === 'admin') {
-        // Admin users are allowed to proceed
-        return $request;
-    }
-    
-    // For non-admin users, redirect them to a different route (e.g., home)
-    return redirect()->to(base_url('/'));
 }
 
     /**

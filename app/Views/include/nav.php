@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="/">
-                <img src="images/shopping-bag-icon.png" alt="site icon">
+                <img src="<?=base_url('images/shopping-bag-icon.png')?>" alt="site icon">
                 <span class="text-uppercase fw-lighter ms-2">Attire</span>
             </a>
 
@@ -20,6 +20,10 @@
                         <i class=""></i> Admin
                     </a>
                 </button>
+                <a href="/logout" class="btn btn-danger position-relative">
+  Logout <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+</a>
+
 
             </div>
 

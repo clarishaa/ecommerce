@@ -38,7 +38,7 @@
 
           <div class="profile clearfix">
             <div class="profile_pic">
-              <img src="/adminR/production/images/profile-pic.png" alt="..." class="img-circle profile_img">
+              <img src="<?= base_url('/adminR/production/images/profile-pic.png') ?>" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>Welcome,</span>
@@ -182,7 +182,7 @@
             <ul class=" navbar-right">
               <li class="nav-item dropdown open" style="padding-left: 15px;">
                 <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                  <img src="/adminR/production/images/profile-pic.png" alt="">
+                  <img src="<?= base_url('/adminR/production/images/profile-pic.png') ?>" alt="">
                 </a>
                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="javascript:;"> Profile</a>
@@ -203,7 +203,7 @@
                 <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                   <li class="nav-item">
                     <a class="dropdown-item">
-                      <span class="image"><img src="/adminR/production/images/profile-pic.png" alt="Profile Image" /></span>
+                      <span class="image"><img src="<?= base_url('/adminR/production/images/profile-pic.png') ?>" alt="Profile Image" /></span>
                       <span>
                         <span>Clarish Jabonillo</span>
                         <span class="time">3 mins ago</span>
@@ -215,7 +215,7 @@
                   </li>
                   <li class="nav-item">
                     <a class="dropdown-item">
-                      <span class="image"><img src="/adminR/production/images/profile-pic.png" alt="Profile Image" /></span>
+                      <span class="image"><img src="<?= base_url('/adminR/production/images/profile-pic.png') ?>" alt="Profile Image" /></span>
                       <span>
                         <span>Clarish Jabonillo</span>
                         <span class="time">3 mins ago</span>
@@ -227,7 +227,7 @@
                   </li>
                   <li class="nav-item">
                     <a class="dropdown-item">
-                      <span class="image"><img src="/adminR/production/images/profile-pic.png" alt="Profile Image" /></span>
+                      <span class="image"><img src="<?= base_url('/adminR/production/images/profile-pic.png') ?>" alt="Profile Image" /></span>
                       <span>
                         <span>Clarish Jabonillo</span>
                         <span class="time">3 mins ago</span>
@@ -239,7 +239,7 @@
                   </li>
                   <li class="nav-item">
                     <a class="dropdown-item">
-                      <span class="image"><img src="/adminR/production/images/profile-pic.png" alt="Profile Image" /></span>
+                      <span class="image"><img src="<?= base_url('/adminR/production/images/profile-pic.png') ?>" alt="Profile Image" /></span>
                       <span>
                         <span>Clarish Jabonillo</span>
                         <span class="time">3 mins ago</span>

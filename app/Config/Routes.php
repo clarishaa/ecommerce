@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Home::index', ['filter' => 'authGuard']);
 $routes->get('/admin', 'Home::admin', ['filter' => 'authGuard']);
 $routes->post('/add', 'Home::add', ['filter' => 'authGuard']);
 $routes->get('/delete/(:any)', 'Home::delete/$1', ['filter' => 'authGuard']);
