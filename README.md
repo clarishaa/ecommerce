@@ -1,3 +1,9 @@
+# Admin Credentials
+emai: admin@gmail.com
+password: admin
+
+
+
 # CodeIgniter 4 Application Starter
 
 ## What is CodeIgniter?
