@@ -1,5 +1,5 @@
 # Admin Credentials
-emai: admin@gmail.com
+email: admin@gmail.com
 password: admin
 
 
