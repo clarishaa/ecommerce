@@ -15,18 +15,21 @@
                 <h2>Login</h2>
                 <?php if (session()->getFlashdata('msg')) : ?>
                     <div class="alert alert-warning">
-                        <?= session()->getFlashdata('msg')?>
+                        <?= session()->getFlashdata('msg') ?>
                     </div>
                 <?php endif; ?>
-                <form action="<?php echo base_url(); ?>/SigninController/loginAuth" method="post">
+                <form action="<?php echo base_url(); ?>signin" method="post">
                     <div class="form-group mb-3">
-                        <input type="email" name="email" placeholder="Email" value="<?=set_value('email')?>" class="form-control">
+                        <input type="email" name="email" placeholder="Email" value="<?= set_value('email') ?>" class="form-control">
                     </div>
                     <div class="form-group mb-3">
                         <input type="password" name="password" placeholder="Password" class="form-control">
                     </div>
-                    <div class="d-grid">
+                    <div class="d-grid mb-3">
                         <button type="submit" class="btn btn-dark">Signin</button>
+                    </div>
+                    <div class="d-grid mb-3">
+                        <a href="/signup" class="btn btn-primary">Create Account</a>
                     </div>
                 </form>
             </div>

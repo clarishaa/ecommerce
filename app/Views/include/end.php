@@ -6,3 +6,4 @@
 <script src="<?= base_url('bootstrap-5.0.2-dist/js/bootstrap.min.js') ?>"></script>
 <!-- custom js -->
 <script src="<?= base_url('js/script.js') ?>"></script>
+
