@@ -33,12 +33,12 @@ class Home extends BaseController
     public function product($product_id){
         $product = $this->products->where('product_id', $product_id)->first();
         if (!$product) {
-            return redirect()->to('/');
+            return redirect()->to(base_url('/'));
         }
             $category_id = $product['category_id'];
             $category = $this->categories->find($category_id);
         if (!$category) {
-            return redirect()->to('/');
+            return redirect()->to(base_url('/'));
         }
             $categories = $this->categories->findAll();
         $data = [
@@ -114,11 +114,11 @@ class Home extends BaseController
             $this->products->insert($data);
         }
     
-        return redirect()->to('/admin');
+        return redirect()->to(base_url('/admin'));
     }
     public function delete($product_id)
     {
         $this->products->delete($product_id);
-        return redirect()->to('/admin');
+        return redirect()->to(base_url('/admin'));
     }
 }

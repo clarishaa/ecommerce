@@ -26,7 +26,7 @@ class UserController extends BaseController
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
             $userModel->save($data);
-            return redirect()->to('/login');
+            return redirect()->to(base_url('/login'));
         } else {
             $data['validation'] = $this->validator;
             echo view('signup', $data);
@@ -71,7 +71,7 @@ class UserController extends BaseController
             if ($data['role'] === 'admin') {
                 return redirect()->to(base_url('/admin'));
             } else {
-                return redirect()->to('/');
+                return redirect()->to(base_url('/'));
             }
         } else {
             $session->setFlashdata('msg', 'Password is incorrect.');

@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="/">
-                <img src="<?=base_url('images/shopping-bag-icon.png')?>" alt="site icon">
+                <img src="<?= base_url('images/shopping-bag-icon.png') ?>" alt="site icon">
                 <span class="text-uppercase fw-lighter ms-2">Attire</span>
             </a>
 
@@ -16,15 +16,10 @@
                     <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
                 </button>
                 <button type="button" class="btn position-relative">
-                    <a href="/admin" class="btn btn-danger btn-sm">
-                        <i class=""></i> Admin
+                    <a href="/logout" class="btn btn-danger position-relative">
+                        Logout <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                     </a>
                 </button>
-                <a href="/logout" class="btn btn-danger position-relative">
-  Logout <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-</a>
-
-
             </div>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
