@@ -28,9 +28,6 @@
                     <div class="d-grid mb-3">
                         <button type="submit" class="btn btn-dark">Signin</button>
                     </div>
-                    <div class="d-grid mb-3">
-                        <a href="/signup" class="btn btn-primary">Create Account</a>
-                    </div>
                 </form>
             </div>
         </div>
