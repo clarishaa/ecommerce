@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 01, 2023 at 11:51 PM
+-- Generation Time: Oct 03, 2023 at 11:25 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -63,11 +63,18 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `name`, `description`, `image`, `price`, `category_id`, `quantity`) VALUES
-(1, 'Product 1', 'Description of Product 1', '/image1.png', 19.99, 1, 100),
-(2, 'Product 2', 'Description of Product 2', '/image1.png', 29.99, 2, 50),
-(3, 'Product 3', 'Description of Product 3', '/image1.png', 39.99, 3, 75),
-(5, 'digi', 'qwerty', '/digi.jpg', 23.00, NULL, 24),
-(7, 'ss', 'sssh', '/ss.jpg', 22.00, NULL, 22);
+(8, 'Cotton Blend T-Shirt', 'Classic cotton blend t-shirt with a comfortable fit.', '/Cotton Blend T-Shirt.jpg', 24.99, 1, 100),
+(9, 'Slim Fit Denim Jeans', 'Premium slim fit jeans made from high-quality denim.', '/Slim Fit Denim Jeans.avif', 59.99, 1, 50),
+(10, 'Casual Plaid Shirt', 'Stylish plaid shirt for everyday wear.', '/Casual Plaid Shirt.jpg', 34.99, 1, 75),
+(11, 'Leather Jacket', 'Genuine leather jacket with a timeless design.', '/Leather Jacket.jpg', 129.99, 2, 30),
+(12, 'Wool Blend Coat', 'Warm and stylish wool blend coat for colder days.', '/Wool Blend Coat.webp', 89.99, 2, 20),
+(13, 'Athletic Running Shoes', 'High-performance running shoes for athletes.', '/Athletic Running Shoes.jpg', 79.99, 2, 40),
+(14, 'Silk Evening Gown', 'Elegant silk evening gown for special occasions.', '/Silk Evening Gown.webp', 199.99, 3, 10),
+(15, 'Formal Men\'s Suit', 'Classic formal suit for men, perfect for weddings.', '/Formal Men\'s Suit.jpg', 149.99, 3, 15),
+(16, 'Vintage Sunglasses', 'Retro-style sunglasses with UV protection.', '/Vintage Sunglasses.jpg', 29.99, 3, 50),
+(17, 'Leather Backpack', 'Stylish and durable leather backpack for daily use.', '/Leather Backpack.jpg', 79.99, 4, 25),
+(18, 'Canvas Messenger Bag', 'Versatile canvas messenger bag with multiple compartments.', '/Canvas Messenger Bag.jpg', 49.99, 4, 35),
+(19, 'Travel Luggage Set', 'Complete luggage set for your travel needs.', '/Travel Luggage Set.webp', 199.99, 4, 10);
 
 -- --------------------------------------------------------
 
@@ -79,7 +86,6 @@ CREATE TABLE `users` (
   `id` int NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `role` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'user',
   `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -87,12 +93,13 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `role`, `email`) VALUES
-(7, 'qwerty', '$2y$10$wBv/x78Ljg5BiUejoSXeiujUx.BxB29WHtdmQYy6Pvd', 'user', 'qwerty@gmail.com'),
-(10, 'Admin', '$2y$10$.EBBr5RIHFdbb2qveLOME.rQmGsr6Zktpd1jnJYiFVGvRtFrbDVeq', 'admin', 'admin@gmail.com'),
-(11, 'Clarish', '$2y$10$i6auYln3HYIYXRrw2AS/buEa8NW02/9MoQBImHXmNZMLA0h2SM9/m', 'user', 'jrishh2902@gmail.com'),
-(12, 'Caelyn', '$2y$10$DvLh9.4bDQNHNT67fWEZfeybqlT0r6VCizI57p.hq90azJyV.6HYK', 'user', 'cae@gmail.com'),
-(13, 'Caelyn', '$2y$10$LOg8mL/qPqSzhPGuy1A0ROcMYYcsA9sahMhZFmsOFaI4eYUGni1CC', 'user', 'caelyn@gmail.com');
+INSERT INTO `users` (`id`, `username`, `password`, `email`) VALUES
+(7, 'qwerty', '$2y$10$wBv/x78Ljg5BiUejoSXeiujUx.BxB29WHtdmQYy6Pvd', 'qwerty@gmail.com'),
+(10, 'Admin', '$2y$10$.EBBr5RIHFdbb2qveLOME.rQmGsr6Zktpd1jnJYiFVGvRtFrbDVeq', 'admin@gmail.com'),
+(11, 'Clarish', '$2y$10$i6auYln3HYIYXRrw2AS/buEa8NW02/9MoQBImHXmNZMLA0h2SM9/m', 'jrishh2902@gmail.com'),
+(12, 'Caelyn', '$2y$10$DvLh9.4bDQNHNT67fWEZfeybqlT0r6VCizI57p.hq90azJyV.6HYK', 'cae@gmail.com'),
+(13, 'Caelyn', '$2y$10$LOg8mL/qPqSzhPGuy1A0ROcMYYcsA9sahMhZFmsOFaI4eYUGni1CC', 'caelyn@gmail.com'),
+(14, 'jrishh2929@gmail.com', '$2y$10$L0Nw591FkzkT6Y.taalgW.C63ca78I0Ikl6AEyQ7WqePK8qB120gW', 'jrishh2929@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -131,13 +138,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `product_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables

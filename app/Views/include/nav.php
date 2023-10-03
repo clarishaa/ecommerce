@@ -16,8 +16,8 @@
                     <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">2</span>
                 </button>
                 <button type="button" class="btn position-relative">
-                    <a href="/logout" class="btn btn-danger position-relative">
-                        Logout <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    <a href="/admin" class="btn btn-danger position-relative">
+                        Admin <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                     </a>
                 </button>
             </div>

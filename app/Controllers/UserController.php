@@ -10,7 +10,7 @@ class UserController extends BaseController
 
     public function register()
     {
-        
+
         helper(['form']);
         $rules = [
             'username' => 'required|min_length[4]|max_length[50]',
@@ -44,43 +44,35 @@ class UserController extends BaseController
         $session->destroy();
         return redirect()->to(base_url('/login'));
     }
-    
+
 
     public function LoginAuth()
-{
-    $session = session();
-    $userModel = new UserModel();
-    $email = $this->request->getVar('email');
+    {
+        $session = session();
+        $userModel = new UserModel();
+        $email = $this->request->getVar('email');
 
-    $data = $userModel->where('email', $email)->first();
+        $data = $userModel->where('email', $email)->first();
 
-    if ($data) {
-        $enteredPassword = $this->request->getVar('password');
-        $hashedPassword = $data['password'];
+        if ($data) {
+            $enteredPassword = $this->request->getVar('password');
+            $hashedPassword = $data['password'];
 
-        if (password_verify($enteredPassword, $hashedPassword)) {
-            $ses_data = [
-                'id' => $data['email'],
-                'isLoggedIn' => true,
-                'userRole' => $data['role'],
-                'username' => $data['username'],
-            ];
-            $session->remove('validation_errors');
+            if (password_verify($enteredPassword, $hashedPassword)) {
+                $ses_data = [
+                    'id' => $data['email'],
+                    'isLoggedIn' => true,
+                ];
 
-            $session->set($ses_data);
-            if ($data['role'] === 'admin') {
-                return redirect()->to(base_url('/admin'));
+                $session->set($ses_data);
+                    return redirect()->to(base_url('/admin'));
             } else {
-                return redirect()->to(base_url('/'));
+                $session->setFlashdata('msg', 'Password is incorrect.');
+                return redirect()->to(base_url('/login'));
             }
         } else {
-            $session->setFlashdata('msg', 'Password is incorrect.');
+            $session->setFlashdata('msg', 'Email does not exist.');
             return redirect()->to(base_url('/login'));
         }
-    } else {
-        $session->setFlashdata('msg', 'Email does not exist.');
-        return redirect()->to(base_url('/login'));
     }
-}
-
 }

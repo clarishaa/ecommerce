@@ -165,8 +165,8 @@
               <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
             </a>
             <a data-toggle="tooltip" data-placement="top" title="Logout" href="/logout">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
           </div>
           <!-- /menu footer buttons -->
         </div>
@@ -221,7 +221,7 @@
                         <span class="time">3 mins ago</span>
                       </span>
                       <span class="message">
-                      Why don't programmers like nature? It has too many bugs.. They were where...
+                        Why don't programmers like nature? It has too many bugs.. They were where...
                       </span>
                     </a>
                   </li>
@@ -279,6 +279,7 @@
               <div class="x_panel">
                 <div class="x_title">
                   <h2>Product Information<small>E-commerce</small></h2>
+                  <a href="/signup" class="btn btn-info float-end">Add Admin</a>
                   <div class="clearfix"></div>
                 </div>
 
